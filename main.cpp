@@ -1,9 +1,10 @@
 #include <iostream>
-//符号常量
-#define PI 3+2//千万别加“；”
 
 int main() {
-    int i=PI*2;//直接将3+2移到这里
-    printf("i=%d\n",i);
+    int i=5;
+    float j=i/2;
+    float k=(float)i/2;//强制类型转换
+    printf("%f\n",j);
+    printf("%.2f\n",k);
     return 0;
 }
