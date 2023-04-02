@@ -1,15 +1,11 @@
 #include <iostream>
 
 int main() {
-    int year;
-    scanf("%d",&year);
-    if(year%4==0&&year%100!=0||year%400==0)
-    {
-        printf("yes\n");
-    }
-    else
-    {
-        printf("no\n");
-    }
+    int i;
+    char j;
+    float k,sum=0.0;
+    scanf("%d %c%f",&i,&j,&k);
+    sum=(float)i+k+(j);
+    printf("%0.2f",sum);
     return 0;
 }
