@@ -1,19 +1,26 @@
 #include <stdio.h>
 
 int main() {
-    int i,a=0,b;
-    scanf("%d",&i);
-    b=i;
-    while(b)
+    int a,b,c,d,sum,h=0,k=0;
+    for(a=1;a<10;a++)
     {
-        a=a*10+b%10;
-        b/=10;
+        for(b=1;b<20;b++)
+        {
+            for(c=1;c<39;c++)
+            {
+                for(d=1;d<39;d++)
+                {
+                    k=a+b+c+d;
+                    sum=0;
+                    sum=a*10+b*5+c*2+d;
+                    if(k==40&&sum==100)
+                    {
+                        h+=1;
+                    }
+                }
+            }
+        }
     }
-    if(a==i)
-    {
-        printf("yes\n");
-    }else{
-        printf("no\n");
-    }
+    printf("%d\n",h);
     return 0;
 }
