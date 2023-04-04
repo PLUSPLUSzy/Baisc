@@ -1,20 +1,27 @@
 #include <stdio.h>
+#include<string.h>
 
 int main() {
-    int a[100];
-    int b,i,c=0;
-    scanf("%d",&b);
-    for(int i=0;i<b;i++)
+    int len,i;
+    char c[100];
+    char d[100];
+    gets(c);
+    len=strlen(c);
+    for(i=0;i<len;i++)
     {
-        scanf("%d",&a[i]);
+        d[i]=c[len-1-i];
     }
-    for(i=0;i<b;i++)
+    int result = strcmp(c, d);
+    if (result < 0)
     {
-        if(a[i]==2)
-        {
-            c++;
-        }
+        printf("%d\n",-1);
     }
-    printf("%d\n",c);
+    else if (result > 0)
+    {
+        printf("%d\n", 1);
+    }
+    else {
+        printf("%d\n", 0);
+    }
     return 0;
 }
