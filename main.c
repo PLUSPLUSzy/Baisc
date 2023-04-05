@@ -1,15 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int change(int* j)
-{
-    *j/=2;
-    return j;
-}
 int main() {
-    int i;
-    scanf("%d",&i);
-    int* p=&i;
-    change(&i);
-    printf("%d\n",*p);
+    int size;
+    char* p;
+    char c;
+    scanf("%d",&size);
+    p=(char*)malloc(size);
+    scanf("%c",&c);//清除缓冲区
+    gets(p);
+    puts(p);
+    free(p);
     return 0;
 }
